@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/vendors/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./assets/css/ind.css">
+    <script src="./assets/vendors/jq.js"></script>
+    <script src="./assets/vendors/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="header" id="header">
+    <fieldset class="ui-grid-b" id="header2">
+        <div id="menubutton" class="ui-block-a" style="text-align:left;">
+            <a href="#leftpanel3"><span class="ui-btn ui-icon-bars ui-btn-icon-notext"></span></a>
+            <a href="tel:+18324036883"><span class="ui-btn ui-icon-phone ui-btn-icon-notext"></span></a>
+        </div>
+        <div id="basketArea">
+            <div class="ui-block-a">
+                <img src="./assets/img/basket1.png" style="width:25px;"/>
+            </div>
+            <div class="ui-block-b">
+                <h4 id="allprice"><b> $</b> Price </h4>
+            </div>
+            <div class="ui-block-c">
+                <a href="#basket" id=btnCallBasket class="ui-btn bassss">Order Now</a>
+            </div>
+        </div>
+        <div id="searchArea">
+            <input type="text" class="search" name="search" id="search" placeholder="Search.." autocomplete="off"/>
+            <div id="searchresult" class="ui-grid-solo" style="text-align:center;">
+                <table id='allsearch' class='table table-hover results'>
+                </table>
+            </div>
+        </div>
+        <div id="logo"><a href="./index.html"><img src="./assets/img/logo.png" class="logo"/></a></div>
+    </fieldset>
+    <div id="footer" data-position="fixed">
+        <fieldset class="ui-grid-b">
+        </fieldset>
+    </div>
+    <div data-role="navbar" id="navbar">
+        <ul class="ui-grid-b">
+            <li class="ui-block-a"><a href="#veg">Veggies</a></li>
+            <li class="ui-block-b"><a href="#fruits">Fruits</a></li>
+            <li class="ui-block-c"><a href="#offers">Offers</a></li>
+            <li class="ui-block-d"><a href="#misc">Misc</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-role="page" id="home">
+    <div data-role="main" class="ui-content">
+        <a href="#home">
+            <div class="ui-grid-sole lastoff">
+                <!--<h4>Latest Offers</h4>-->
+                <div id="showlastoff">
+                </div>
+
+            </div>
+        </a>
+        <a href="#veg">
+            <div class="ui-grid-sole veg">
+                <h4 class="light">Veggies</h4>
+            </div>
+        </a>
+        <a href="#fruits">
+            <div class="ui-grid-sole fruits">
+                <h4 class="light">Fruits</h4>
+            </div>
+        </a>
+        <a href="#offers">
+            <div class="ui-grid-sole offers">
+                <h4 class="light">Offers</h4>
+            </div>
+        </a>
+        <a href="#misc">
+            <div class="ui-grid-sole misc">
+                <h4 class="light">Misc</h4>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div data-role="page" id="fruits">
+    <div data-role="main" class="ui-content">
+        <!--<script>getfruits();</script>-->
+        <div>
+            <div class="ui-grid-sole fruits">
+                <h4 class="light">Fruits</h4>
+            </div>
+            <div id="allfruits" class="ui-grid-a" style="text-align:center;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="misc">
+    <div data-role="main" class="ui-content">
+        <!--<script>getmisc();</script>-->
+        <div>
+            <div class="ui-grid-sole misc">
+                <h4 class="light">Misc</h4>
+            </div>
+            <div id="allmisc" class="ui-grid-a" style="text-align:center;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="login">
+    <div data-role="main" class="ui-content">
+        <div>
+            <div class="ui-grid-sole fruits">
+                <h4 class="light">Login</h4>
+            </div>
+            <form method="post" id="loginform" style="padding:10px;">
+                <input type="tel" name="mobile" id="mobileLog" Placeholder="Phone"/>
+                <input type="password" name="password" id="passwordLog" Placeholder="Password"/>
+                <input type="submit" value="Login" id="loginbutton">
+                <p>Don't have an account?<a href="#register">Create your account</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="register">
+    <div data-role="main" class="ui-content">
+        <div>
+            <div class="ui-grid-sole fruits">
+                <h4 class="light">Create Account</h4>
+            </div>
+            <form method="post" id="registerform" style="padding:10px;">
+                <input type="text" name="name" id="name" Placeholder="Name">
+                <input type="tel" name="mobile" id="mobile" Placeholder="Phone">
+                <input type="email" name="email" id="email" Placeholder="Email">
+                <input type="password" name="password" id="password" Placeholder="Password">
+                <input type="text" name="add1" id="add1" Placeholder="Address">
+                <input type="tel" name="whatsapp" id="whatsapp" Placeholder="Whatsapp">
+                <select name="city" id="city" Placeholder="City">
+                    <option value="Houston">Houston</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Austin">Austin</option>
+                </select>
+                <input type="submit" value="Create Account" id="createaccount">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div data-role="page" id="veg">
+    <div data-role="main" class="ui-content">
+        <!--<script>getveg();</script>-->
+        <div>
+            <div class="ui-grid-sole veg">
+                <h4 class="light">Veggies</h4>
+            </div>
+            <div id="allveg" class="ui-grid-a" style="text-align:center;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="thisorder">
+    <div data-role="main" class="ui-content">
+        <div>
+            <div id="thisorderinfo" class="ui-grid-a" style="text-align:center;directon:rtl;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="offers">
+    <div data-role="main" class="ui-content">
+        <!--<script>getoffersz();</script>-->
+        <div>
+            <div class="ui-grid-sole offers">
+                <h4 class="light">Offers</h4>
+            </div>
+            <div id="alloffers" class="ui-grid-a" style="text-align:center;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="info">
+    <div data-role="main" class="ui-content">
+        <div id="userinfo" class="ui-grid-a">
+            <form id="updateinfo" style="padding:10px;">
+                Phone <input id="uphone" name="phone" value="" Placeholder=" Phone">
+                Name <input id="uname" name="name" value="" Placeholder=" Name">
+                Whatsapp <input id="uwhatsapp" name="whatsapp" value="" Placeholder="  Whatsapp">
+                Address <input id="uadd1" name="add1" value="" Placeholder=" Address ">
+                City <select name="city" id="ucity" Placeholder=" City">
+                <option value="Houston">Houston</option>
+                <option value="Dallas">Dallas</option>
+                <option value="Austin">Austin</option>
+            </select>
+                <input type="submit" value="Update Info" id="updateaccount">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div data-role="page" id="basket">
+    <div data-role="main" class="ui-content">
+        <div id="mybasket" class="ui-grid-a" style="text-align:center;">
+        </div>
+        <div class="basketNote">
+            <button id="ordernow" class="ui-btn">Order Now</button>
+            <div id="emptyNote">Your basket is empty!<br />Click on a category to buy.</div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="account">
+    <div data-role="main" class="ui-content">
+        <div id="myaccount" class="ui-grid-sole" style="text-align:center;">
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="help">
+    <div data-role="main" class="ui-content">
+        <div style="text-align:center; ">
+            <p><b>Contact Orders: </b><br><a href="tel:+1(832)4036883">+1(832)4036883</a></p>
+        </div>
+    </div>
+</div>
+
+<div data-role="panel" id="leftpanel3" data-display="overlay" style="background-color:#f3f3f3;">
+    <a href="#home"><h3 id="userid"></h3></a>
+    <ul data-role="listview" data-inset="true">
+        <li class="log" data-icon="user"><a href="#info">Personal Info</a></li>
+        <li class="log" data-icon="shop"><a href="#basket" id="bassss">Basket</a></li>
+        <li class="log" data-icon="calendar"><a href="#account">Account</a></li>
+        <li class="notlog" data-icon="user"><a href="#login">Login</a></li>
+        <li class="notlog" data-icon="arrow-u-r"><a href="#register">Create Account</a></li>
+        <li data-icon="info"><a href="#help">Contact</a></li>
+    </ul>
+</div>
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
