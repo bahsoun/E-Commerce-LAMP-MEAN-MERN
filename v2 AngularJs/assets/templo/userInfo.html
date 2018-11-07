@@ -1,0 +1,32 @@
+<div>
+    <div headrs-templato></div>
+
+    <div id="userinfo" class="ui-grid-a" style="width:150px;margin:auto;text-align:right;">
+        <form id="updateinfo" style="padding:10px;">
+            Phone <input id="uphone" name="phone" value="{{exto.usrInfF.phone}}" Placeholder="Phone">
+            Name <input id="uname" name="name" value="{{exto.usrInfF.name}}" Placeholder="Name">
+            Whatsapp <input id="uwhatsapp" name="whatsapp" value="{{exto.usrInfF.whatsapp}}" Placeholder="Whatsapp">
+            email <input id="uemail" name="email" value="{{exto.usrInfF.email}}" Placeholder="Email">
+            Address <input id="uadd1" name="add1" value="{{exto.usrInfF.address}}" Placeholder="Address">
+            <select>
+                <option value="{{exto.usrInfF.gps}}">{{exto.usrInfF.gps}}</option>
+            </select>
+            <input type="submit" value="Edit Information" id="updateaccount">
+        </form>
+    </div>
+    <div class="itemsDiv" >
+        <div ng-repeat="i in catg" class='itemId itmId{{i.id}} ui-block-b' itmId='{{i.id}}' itmPrc='{{i.price}}' itmCat='{{i.type}}' itmCart='{{i.type}}'>
+            <div class='imgf'><img ng-src='img/{{i.img}}'/></div><br>
+            <h4>{{i.name}}</h4>
+            <p class='ppp pppf'>
+                <i class='AddOrSub itmAddOne add{{i.id}} ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext' val='0'>+</i>
+            </p>
+            <p class='ppp count"+this.id+"'>{{i.id}}</p>
+            <p class='ppp pppl'>
+                <i class='AddOrSub itmRemoveOne minus"+this.id+" ui-btn ui-corner-all ui-icon-minus ui-btn-icon-notext'>-</i>
+            </p>
+            <p style='padding:0;margin:0;'>{{i.cat}}</p>
+            <p><b>{{i.price}} $ </b></p>
+        </div>
+    </div>
+</div>

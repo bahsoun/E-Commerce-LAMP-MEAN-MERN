@@ -1,0 +1,15 @@
+<div style="width:450px;max-width:100%;margin:auto">
+    <form id="registerform" style="padding:10px;" ng-submit="reggiNoew()" novalidate>
+        <h4 class="" style="direction:rtl;text-align:center;    font-size: 25px;">Create an Account</h4><hr>
+        <h4 id=errorDivG style="display:none;"></h4><hr>
+        <input type="text" name="name" id="name" Placeholder="Name">
+        <input type="tel" name="mobileR" id="mobileR" Placeholder="Phone" style="" ng-model="mobili" validate>
+        <input type="email" name="email" id="email" Placeholder="Email">
+        <input type="password" name="passwordR" id="passwordR" Placeholder="Password">
+        <input type="text" name="add1" id="add1" Placeholder="Address">
+        <input type="tel" name="whatsapp" id="whatsapp" Placeholder="Whatsapp">
+        <input type="submit" value="Cerate Account" id="createaccount">
+    </form>
+    <div id="loaderDivR" style="display:none;"><i></i></div>
+    <a href="#/login">Or Login</a>
+</div>

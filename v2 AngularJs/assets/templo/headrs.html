@@ -1,0 +1,47 @@
+<fieldset id="header2">
+    <div id="menubutton">
+        <div ng-show="showMenu" style="    position: fixed;top: 48px;left: 10px;width: 250px;background: #fff;z-index: 9;border: 2px solid;border-radius: 22px;">
+            <ul data-role="listview" data-inset="true">
+                <li class="log" data-icon="user"><a href="#userInfo">Account</a></li>
+                <li class="log" data-icon="shop"><a href="#basket" id="bassss">Basket</a></li>
+                <li class="log" data-icon="calendar"><a href="#account">Purchase History</a></li>
+                <li data-icon="info"><a href="#call">Call Us</a></li>
+            </ul>
+        </div>
+        <a href="" ng-click="opM()"><span class=ui-icon-bars"></span>=</a>
+        <a ng-href="tel:4086413242" href="tel:4086413242" class="ui-link">
+            <span class="ui-icon-phone">T</span>
+        </a>
+    </>
+    <div id="serchh">
+        <div class="srh">
+            <input type="text" name="search" id="search" placeholder=".. Search" style="direction: rtl;">
+        </div>
+        <div id="searchresult" class="" style="text-align: center; display: none;">
+
+        </div>
+    </div>
+    <div class="ui-block-c" id="logo" style="text-align:right;">
+        <a href="#/" class="ui-link"><img src="./assets/webimg/logo.png" class="logo"></a>
+    </div>
+
+
+    <div id="cartt">
+        <img src="./assets/webimg/basket1.png" style="width:25px;">
+        <div class="" style="text-align:left;width:70px;">
+            <span><b> {{usrPref.currency}}  </b>&nbsp; </span>
+            <h4 id="allprice" style="margin:0;padding:0;display: inline-block;">{{cartItemsLs['total'] ? cartItemsLs['total']: 0}}</h4>
+        </div>
+        <div class="basko" style="text-align:right;">
+            <a href="#basket" class="bassss">Goto Basket</a>
+        </div>
+    </div>
+
+
+
+</fieldset>
+<ul class="menuTopUl">
+    <li class="menuTopBg" ng-repeat="(i,j) in catos">
+        <a class="menuTop" href="#/p/{{j}}" >{{exto.translations[usrPref.language][j]}}</a>
+    </li>
+</ul>

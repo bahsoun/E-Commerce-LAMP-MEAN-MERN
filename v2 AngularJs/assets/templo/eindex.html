@@ -1,0 +1,20 @@
+<div>
+    <div headrs-templato></div>
+    <div id=sliderr class="lastoff">
+        <h4>Actual Offers </h4>
+        <div id="showlastoff">
+            <section ng-repeat="i in exto.Prod">
+                <div class=scol ng-repeat="j in i" ng-if="j.slider==1">
+                    <a href="#{{j.type}}"><h4>{{j.name}}</h4><b>{{j.price}} $ </b></a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div style="display: table;">
+        <a href="#/p/{{i}}" ng-repeat="(i,j) in exto.Prod" ng-if="i!='slider'" class="catego">
+            <div class="ui-grid-sole veg">
+                <h4 class="light">{{exto.translations[usrPref.language][i]}}</h4>
+            </div>
+        </a>
+    </div>
+</div>

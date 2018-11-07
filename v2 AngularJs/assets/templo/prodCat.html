@@ -1,0 +1,20 @@
+<div>
+    <div headrs-templato></div>
+    <div class="itemsDiv" >
+        <div ng-repeat="(k,i) in prodCatg" class='itemId itmId{{i.id}} ui-block-b' itmId='{{i.id}}' itmPrc='{{i.price}}' itmCat='{{i.type}}' itmCart='{{i.type}}'>
+            <div class="marg">
+                <div class='imgf'><img ng-src='./assets/img/{{i.img}}'/></div><br>
+                <h4>{{i.name}}</h4>
+                <p class='ppp pppf'>
+                    <i class='AddOrSub itmAddOne add{{i.id}} ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext' val='0' ng-click="itmAddOne(i.id,prodCtg,i.price)">+</i>
+                </p>
+                <p class='ppp count{{i.id}}'>{{cartItemsLs[i.id] ? cartItemsLs[i.id].qty: 0}}</p>
+                <p class='ppp pppl'>
+                    <i class='AddOrSub itmRemoveOne minus"+this.id+" ui-btn ui-corner-all ui-icon-minus ui-btn-icon-notext' ng-click="itmRemoveOne(i.id,prodCtg,i.price)">-</i>
+                </p>
+                <p style='padding:0;margin:0;'>{{i.cat}}</p>
+                <p><b>{{i.price}} {{usrPref.currency}} </b></p>
+            </div>
+        </div>
+    </div>
+</div>

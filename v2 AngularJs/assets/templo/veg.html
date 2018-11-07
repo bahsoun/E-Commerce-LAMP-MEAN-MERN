@@ -1,0 +1,18 @@
+<div>
+    <div headrs-templato></div>
+    <div class="itemsDiv" >
+        <div ng-repeat="i in exto.Prod.veg" class='itemId itmId{{i.id}} ui-block-b' itmId='{{i.id}}' itmPrc='{{i.price}}' itmCat='{{i.type}}' itmCart='{{i.type}}'>
+            <div class='imgf'><img ng-src='img/{{i.img}}'/></div><br>
+            <h4>{{i.name}}</h4>
+            <p class='ppp pppf'>
+                <i class='AddOrSub itmAddOne add{{i.id}} ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext' val='0'>+</i>
+            </p>
+            <p class='ppp count"+this.id+"'>{{i.id}}</p>
+            <p class='ppp pppl'>
+                <i class='AddOrSub itmRemoveOne minus"+this.id+" ui-btn ui-corner-all ui-icon-minus ui-btn-icon-notext'>-</i>
+            </p>
+            <p style='paddinwg:0;margin:0;'>{{i.cat}}</p>
+            <p><b>{{i.price}} $ </b></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div>
+    <div headrs-templato></div>
+
+<div data-role="main" class="ui-content" ng-controller="EcomBasketController">
+    <div id="mybasket" class="ui-grid-a" style="text-align:center;">
+
+        <div class="itemsDiv" >
+            <div ng-repeat="(k,i) in cartItemsLs" class='itemId itmId{{k}} ui-block-b' itmId='{{k}}' itmPrc='{{exto.Prod[i.t][k].price}}' itmCat='{{i.t}}' itmCart='{{i.t}}' ng-if="k != 'total'">
+                <div class="marg">
+                    <div class='imgf'><img ng-src='./assets/img/{{exto.Prod[i.t][k].img}}'/></div><br>
+                    <h4>{{exto.Prod[i.t][k].name}}</h4>
+                    <p class='ppp pppf'>
+                        <i class='AddOrSub itmAddOne add{{k}} ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext' val='0' ng-click="itmAddOne(k,i.t,exto.Prod[i.t][k].price)">+</i>
+                    </p>
+                    <p class='ppp count{{k}}'>{{i.qty}}</p>
+                    <p class='ppp pppl'>
+                        <i class='AddOrSub itmRemoveOne minus"+this.id+" ui-btn ui-corner-all ui-icon-minus ui-btn-icon-notext' ng-click="itmRemoveOne(k,i.t,exto.Prod[i.t][k].price)">-</i>
+                    </p>
+                    <p style='padding:0;margin:0;'>{{exto.Prod[i.t][k].cat}}</p>
+                    <p><b>{{exto.Prod[i.t][k].price}} {{usrPref.currency}} </b></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <button id="ordernow" class="ui-btn" ng-hide="basketEmpty">Send Order</button>
+    <p ng-show="basketEmpty">Basket Is Empty!</p>
+</div>
+</div>

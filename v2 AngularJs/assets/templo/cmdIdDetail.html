@@ -1,0 +1,16 @@
+<div>
+    <div headrs-templato></div>
+
+    <div id="thisorderinfo" class="ui-grid-a" style="text-align:center;directon:rtl;">
+        <table style="margin:auto;    direction: rtl;"  ng-init="cmdDet.total = 0">
+        <tr><td style='width: 130px;'> Type  </td><td style='width: 14px;'>Qty </td><td style='    width: 55px;'>Price</td></tr>
+
+        <tr ng-repeat="i in cmdIdDetail" ng-init="cmdDet.total =  cmdDet.total + ((i.quantity | num) * (i.price | num))"><td>{{i.product}}</td><td>{{i.quantity}}</td> <td>{{i.price}} $ </td></tr>
+
+
+            <tr><td colspan=3><b>Total </b>  {{cmdDet.total}}  $ </td></tr>
+        </table>
+    </div>
+    <div class=history><a href='#account'> Back</a></div>
+
+</div>

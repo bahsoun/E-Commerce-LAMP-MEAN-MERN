@@ -1,0 +1,17 @@
+<div>
+    <div headrs-templato></div>
+    <div id="myaccount" class="ui-grid-sole" style="text-align:center;">
+        <table style="margin: auto;">
+            <tr>
+                <td style='width: 25px;'> Number</td>
+                <td style='    width: 61px;'>Total</td>
+                <td style='    width: 166px;'>Date</td>
+            </tr>
+            <tr ng-repeat="(o,i) in exto.accSum" ng-click="detail(i.id)" class='{{i.id}} AccDetN' InvID="{{i.id}}">
+                <td>{{i.id}}</td>
+                <td>SR <b> {{i.tp}} </b></td>
+                <td>{{i.datetime}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
