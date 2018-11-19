@@ -1,4 +1,4 @@
-//ES5 Version
+//ES6 Version
 
 //Clear Storage on new logic
 
