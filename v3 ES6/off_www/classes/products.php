@@ -39,6 +39,7 @@ class products
                 $arr[$item["type"]][$item["id"]]=$item;
             }
         }
+
         $json = json_encode($arr);
         return $json;
     }
