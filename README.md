@@ -8,7 +8,7 @@
  ###v7 Spring (Backend)    
  ###v8 Go Lang (Backend)  
    
-##------------------------------------------------------
+##------------------------------------------------------  
 ####Main logic files are in:  
 ####v1  
 https://github.com/bahsoun/E-Commerce-LAMP-MEAN-MERN/blob/master/v2%20Javascript/assets/js/main.js  
