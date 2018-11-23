@@ -28,6 +28,7 @@ module.exports = grunt => {
             main: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['index.html'], dest: './build'},
+                    {expand: true, cwd: 'src/data', src: ['**'], dest: './build/data'},
                     {expand: true, cwd: 'src/js', src: ['*'], dest: './build/js'},
                     {expand: true, cwd: 'src/css', src: ['*.css'], dest: './build/css'},
                     {expand: true, cwd: 'src/img', src: ['**'], dest: './build/img'},

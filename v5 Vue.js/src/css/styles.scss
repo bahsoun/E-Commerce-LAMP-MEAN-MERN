@@ -5,11 +5,15 @@ h1 {
     background: green;
   }
 }
+html, body,#mainContents
+{
+  height: 100vh;
+}
 
 #mainContents {
   background: url(../img/slbg.jpg);
   background-origin: border-box;
-
+  //height: 600px;
 }
 
 #home-categories {
@@ -369,12 +373,16 @@ h4#allprice {
     padding: 0;
     margin: 0;
   }
-  li {
+  a {
     &:hover {
       background-color: rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      color:#fff;
     }
-
+    text-decoration: none;
+    color:#fff;
     cursor: pointer;
+    display: inline-flex;
     flex: auto;
     padding: 10px;
     list-style: none;
@@ -397,13 +405,95 @@ h4#allprice {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
-    a {
-      color: #ffffff;
-      text-decoration: none;
+    li {
+      display: inline-block;
+      margin: auto;
     }
   }
 }
 
+.category-listng{
+  margin: auto;
+  display: table;
+  text-align: center;
+  .div-item-id{
+    img{
+      max-width: 90%;
+      height: 140px;
+      margin: 5px;//min width 758
+    }
+    h4{
+      margin: 0;
+    }
+    .AddOrSub{
+      &:after{
+        left: 50%;
+        margin-left: -11px;
+        top: 50%;
+        margin-top: -11px;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-color: #666;
+        background-color: rgba(0,0,0,.3);
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+      }
+      background-color: #f6f6f6;
+      border-color: #ddd;
+      color: #333;
+      text-shadow: 0 1px 0 #f3f3f3;
+      border-radius: 1em;
+      -webkit-border-radius: 1em;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0;
+      width: 1.75em;
+      height: 1.75em;
+      text-indent: -9999px;
+      white-space: nowrap!important;
+      font-size: 16px;
+      margin: .5em .3125em;
+      position: relative;
+      text-align: center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      cursor: pointer;
+      user-select: none;
+    }
+    .qty-p{
+      display: inline-block;
+      vertical-align: top;
+      margin: 5px 0 7px;
+      font-size: 1.5em;
+      width: 45px;
+    }
+    .icon-plus:after {
+      background-image: url('data:image/svg+xml;charset=US-ASCII,<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="14px" height="14px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><polygon fill="#FFF" points="14,5 9,5 9,0 5,0 5,5 0,5 0,9 5,9 5,14 9,14 9,9 14,9 "/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');
+    }
+    .icon-minus:after {
+      background-image: url('data:image/svg+xml;charset=US-ASCII,<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="14px" height="14px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><rect y="5" style="fill:#FFFFFF;" width="14" height="4"/></svg>');
+    }
+    //flex:auto;
+    width: 297px;
+    height: 340px;
+    border-radius: 20px;
+    border: 7px solid #ccc;
+    box-shadow: 0 0 6px #aac;
+    margin: 20px;
+    padding: 10px 0 0;
+    display: inline-block;
+    letter-spacing: 1px;
+    background: #eee;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
 @media (max-width: 600px) {
   .topLeft, .topRight {
     width: 100%;
