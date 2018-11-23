@@ -1,0 +1,355 @@
+{
+  "products": {
+    "slider": {
+      "3": {
+        "id": "3",
+        "name": "Apple",
+        "cssClass": "Apple",
+        "price": "10",
+        "img": "apple.jpg",
+        "offer": "1",
+        "slider": "1",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "6": {
+        "id": "6",
+        "name": "Green Orange",
+        "cssClass": "Green Orange",
+        "price": "15",
+        "img": "imag406648088374274.jpg",
+        "offer": "0",
+        "slider": "1",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "18": {
+        "id": "18",
+        "name": "Radish",
+        "cssClass": "Radish",
+        "price": "1",
+        "img": "imag760107559857501.jpg",
+        "offer": "0",
+        "slider": "1",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "15": {
+        "id": "15",
+        "name": "Orange",
+        "cssClass": "Orange",
+        "price": "30",
+        "img": "imag295524622086830.jpg",
+        "offer": "0",
+        "slider": "1",
+        "type": "fruits",
+        "qttTyp": "crt"
+      }
+    },
+    "offers": {
+      "3": {
+        "id": "3",
+        "name": "Apple",
+        "cssClass": "Apple",
+        "price": "10",
+        "img": "apple.jpg",
+        "offer": "1",
+        "slider": "1",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "23": {
+        "id": "23",
+        "name": "Aubergine",
+        "cssClass": "Aubergine",
+        "price": "8",
+        "img": "imag436512873140200.jpg",
+        "offer": "1",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "crt"
+      }
+    },
+    "fruits": {
+      "5": {
+        "id": "5",
+        "name": "Banana",
+        "cssClass": "Banana",
+        "price": "8",
+        "img": "imag434253127414235.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "6": {
+        "id": "6",
+        "name": "Green Orange",
+        "cssClass": "Green Orange",
+        "price": "15",
+        "img": "imag406648088374274.jpg",
+        "offer": "0",
+        "slider": "1",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "10": {
+        "id": "10",
+        "name": "Yellow lemon",
+        "cssClass": "Yellow lemon",
+        "price": "10",
+        "img": "imag39834956667356.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "12": {
+        "id": "12",
+        "name": "Grape",
+        "cssClass": "Grape",
+        "price": "15",
+        "img": "imag134134390325951.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "fruits",
+        "qttTyp": "lb"
+      },
+      "4": {
+        "id": "4",
+        "name": "Watermelon",
+        "cssClass": "Watermelon",
+        "price": "25",
+        "img": "imag434253127410006.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "fruits",
+        "qttTyp": "pc"
+      },
+      "14": {
+        "id": "14",
+        "name": "Mango Alfa",
+        "cssClass": "Mango Alfa",
+        "price": "30",
+        "img": "imag221133115083259.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "fruits",
+        "qttTyp": "crt"
+      },
+      "15": {
+        "id": "15",
+        "name": "Orange",
+        "cssClass": "Orange",
+        "price": "30",
+        "img": "imag295524622086830.jpg",
+        "offer": "0",
+        "slider": "1",
+        "type": "fruits",
+        "qttTyp": "crt"
+      },
+      "27": {
+        "id": "27",
+        "name": "Melon",
+        "cssClass": "Melon",
+        "price": "15",
+        "img": "imag283929416694561.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "fruits",
+        "qttTyp": "crt"
+      }
+    },
+    "veg": {
+      "2": {
+        "id": "2",
+        "name": "Carrot",
+        "cssClass": "Carrot",
+        "price": "5",
+        "img": "carrot-fb.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "lb"
+      },
+      "21": {
+        "id": "21",
+        "name": "Calabash",
+        "cssClass": "Calabash",
+        "price": "5",
+        "img": "imag634208558493075.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "lb"
+      },
+      "7": {
+        "id": "7",
+        "name": "Parsley",
+        "cssClass": "Parsley",
+        "price": "1",
+        "img": "imag734114836701649.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "8": {
+        "id": "8",
+        "name": "Coriander",
+        "cssClass": "Coriander",
+        "price": "1",
+        "img": "imag456179311111497.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "9": {
+        "id": "9",
+        "name": "Rocca",
+        "cssClass": "Rocca",
+        "price": "1",
+        "img": "imag278675789734828.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "11": {
+        "id": "11",
+        "name": "Leeks",
+        "cssClass": "Leeks",
+        "price": "1",
+        "img": "imag481242034171718.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "13": {
+        "id": "13",
+        "name": "Purslane",
+        "cssClass": "Purslane",
+        "price": "25",
+        "img": "imag693408792213722.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "18": {
+        "id": "18",
+        "name": "Radish",
+        "cssClass": "Radish",
+        "price": "1",
+        "img": "imag760107559857501.jpg",
+        "offer": "0",
+        "slider": "1",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "19": {
+        "id": "19",
+        "name": "Potato",
+        "cssClass": "Potato",
+        "price": "6",
+        "img": "imag497230086512718.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "24": {
+        "id": "24",
+        "name": "Onion",
+        "cssClass": "Onion",
+        "price": "6",
+        "img": "imag249813587223650.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "25": {
+        "id": "25",
+        "name": "Onion Green",
+        "cssClass": "Onion Green",
+        "price": "1",
+        "img": "imag545437212091016.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "26": {
+        "id": "26",
+        "name": "Salad",
+        "cssClass": "Salad",
+        "price": "4",
+        "img": "imag963795492461765.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "pc"
+      },
+      "16": {
+        "id": "16",
+        "name": "Tomato",
+        "cssClass": "Tomato",
+        "price": "12",
+        "img": "imag217145493105596.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "crt"
+      },
+      "17": {
+        "id": "17",
+        "name": "Concumber",
+        "cssClass": "Concumber",
+        "price": "10",
+        "img": "imag985254542451196.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "crt"
+      },
+      "20": {
+        "id": "20",
+        "name": "Okra",
+        "cssClass": "Okra",
+        "price": "12",
+        "img": "imag144075335393698.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "crt"
+      },
+      "22": {
+        "id": "22",
+        "name": "Zucchini",
+        "cssClass": "Zucchini",
+        "price": "15",
+        "img": "imag805082663157294.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "veg",
+        "qttTyp": "crt"
+      }
+    },
+    "misc": {
+      "28": {
+        "id": "28",
+        "name": "Eggs",
+        "cssClass": "Eggs",
+        "price": "2",
+        "img": "imag60729311787088.jpg",
+        "offer": "0",
+        "slider": "0",
+        "type": "misc",
+        "qttTyp": "crt"
+      }
+    }
+  }
+}
