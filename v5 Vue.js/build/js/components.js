@@ -1,15 +1,12 @@
 let AppDotMenu = {
-    // props:['showDotMenu'],
     data: function () {
         return {
-            menuItems: [["Products", 'home'], ['Basket', 'basket'], ['User Info', 'info'], ['Purchases', 'purchases'], ['Contact', 'contact']]
+            menuItems: [["Products", '/'], ['Basket', 'basket'], ['User Info', 'info'], ['Purchases', 'purchases'], ['Contact', 'contact']]
         }
     },
 
     template: `<nav id="dot-menu-full">
                     <ul>
-                    <!--<li>aaa</li>-->
-                    <!--<li>bbb</li>-->
                         <li v-for="menu in menuItems"><a v-bind:href="'#'+menu[1]">{{menu[0]}}</a></li>
                     </ul>
                 </nav>`,
@@ -17,11 +14,13 @@ let AppDotMenu = {
 };
 
 let AppHomeCategories = {
-    props:  ['categories','parCss'],
-    data:()=>{return {parCss:""}},
+    props: ['categories', 'parCss'],
+    data: () => {
+        return {parCss: ""}
+    },
     template: `<div id="home-categories" :class="parCss">
                    <div v-for="cat in categories" :class="'home-category ' + cat[1]">
-                        <a v-bind:href="cat[1]">{{cat[0]}}</a>
+                        <router-link :to="'/category/'+cat[1]">{{cat[0]}}</router-link>
                    </div>
                 </div>`,
     methods: {}
@@ -29,20 +28,17 @@ let AppHomeCategories = {
 
 
 let AppHomeSlider = {
-    // props:['sliderProducts'],
-    props:{ },
     data: function () {
         return {
-            sliderCss:'slider',
-            isShadow:true,
+            sliderCss: 'slider',
+            isShadow: true,
+            sliderProducts: ['lksda', '23dsa', 'apples'],
             topMenuItems: [['Veggies', 'veg'], ['Fruits', 'fruits'], ['Offers', 'offers'], ['Misc', 'misc']]
         }
     },
-
     template: `<div id="main-slider">
                     <ul id="latestOffersSlides" :class="[sliderCss]">
-                    <!--<ul :class="[sliderCss,{shadows:isShadow}]">-->
-                        <li class="active" @click="pauseIt(1)" >lksda</li>
+                        <li v-for="(slide, i) in sliderProducts" :class="{'active' : i === 0}" @click="pauseIt(i)">{{slide}}</li>
                     </ul>
                 </div>`,
     methods: {
@@ -54,6 +50,20 @@ let AppHomeSlider = {
     }
 };
 
+let AppHomePage = {
+    props: ['categories'],
+    data: function () {
+        return {
+            catos: [['Veggies', 'veg'], ['Fruits', 'fruits'], ['Offers', 'offers'], ['Misc', 'misc']]
+        };
+    },
+    components: {AppHomeSlider, AppHomeCategories},
+    template: `<div id="appHomePage">
+                    <app-home-slider></app-home-slider>
+                    <app-home-categories :categories=catos></app-home-categories>
+                </div>`
+};
+
 
 let AppFrontMenu = {
     data: function () {
@@ -63,7 +73,9 @@ let AppFrontMenu = {
     },
     template: `<nav class="front-menu">
                     <ul>
-                        <li v-for="menu in topMenuItems"><a v-bind:href="'#'+menu[1]">{{menu[0]}}</a></li>
+                    <router-link v-for="menu in topMenuItems" :to="{path:'/category/'+menu[1]}" append="false">
+                        <li>{{menu[0]}}</li>
+                    </router-link>
                     </ul>
                 </nav>`,
     methods: {}
@@ -72,9 +84,7 @@ let AppFrontMenu = {
 
 let AppSearch = {
     data: function () {
-        return {
-            logoa: './img/logo.png'
-        }
+        return {}
     },
     components: {},
     template: `<input name="search" id="search" placeholder="Search for.." autocomplete="off" />
@@ -83,11 +93,9 @@ let AppSearch = {
 };
 
 
-let  AppTopCart= {
+let AppTopCart = {
     data: function () {
-        return {
-            logoa: './img/logo.png'
-        }
+        return {}
     },
     components: {},
     template: `<div id="basket-cart">
@@ -101,10 +109,10 @@ let  AppTopCart= {
 
 
 let AppHeader = {
-    props:['showDotMenu'],
+    props: ['showDotMenu'],
     data: function () {
         return {
-            logoa: './img/logo.png'
+            logo: './img/logo.png'
         }
     },
     components: {
@@ -122,10 +130,36 @@ let AppHeader = {
                     </div>
                     <div class="topRight">
                         <app-search></app-search>
-                        <a href="#home"><img class="logo" src="./img/logo.png" /></a>
+                        <router-link to="/"><img class="logo" :src=logo /></router-link>
+                        <!--<a href="#home"></a>-->
                     </div>
                 </div>
                `,
     methods: {}
 };
 
+let ProductsVeg = {
+    props: ['category'],
+    data: function () {
+        return {
+            // cats:Object.keys(products.products),
+            base: './img/prod/',
+            // category:$route.params.elemo,
+            items: ajaxData.products
+        }
+    },
+    template: `<div class="category-listng">
+                    <div v-for="item in items[category]" :class="'div-item-id item-id-' + item.id"  :item-id-attr="item.id" 
+                    :item-price-attr="item.price" :item-catg-attr="item.type" :item-cart-attr="item.cartQty"> 
+                        <div class='imgf'> 
+                            <img :src="base + item.img"/> 
+                        </div>
+                        <br>
+                        <h4>{{item.name}}</h4> 
+                        <i :class="'itmAddOne add'+item.id+' AddOrSub icon-plus'">+</i> 
+                        <p :class="'qty-p count' + item.id">{{item.cartQty || 0}}</p> 
+                        <i :class="'itmRemoveOne minus'+item.id+' AddOrSub icon-minus'">-</i> 
+                        <p class='price'>$<b>{{item.price}}</b>/{{item.qttTyp}}</p> 
+                    </div>
+                </div>`,
+};

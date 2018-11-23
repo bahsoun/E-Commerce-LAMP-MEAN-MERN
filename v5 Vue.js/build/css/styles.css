@@ -6,6 +6,10 @@ h1 span {
   background: green;
 }
 
+html, body, #mainContents {
+  height: 100vh;
+}
+
 #mainContents {
   background: url(../img/slbg.jpg);
   background-origin: border-box;
@@ -347,8 +351,11 @@ h4#allprice span {
   padding: 0;
   margin: 0;
 }
-.front-menu li {
+.front-menu a {
+  text-decoration: none;
+  color: #fff;
   cursor: pointer;
+  display: inline-flex;
   flex: auto;
   padding: 10px;
   list-style: none;
@@ -372,12 +379,96 @@ h4#allprice span {
   box-sizing: border-box;
   text-align: center;
 }
-.front-menu li:hover {
+.front-menu a:hover {
   background-color: rgba(0, 0, 0, 0.2);
-}
-.front-menu li a {
-  color: #ffffff;
   text-decoration: none;
+  color: #fff;
+}
+.front-menu a li {
+  display: inline-block;
+  margin: auto;
+}
+
+.category-listng {
+  margin: auto;
+  display: table;
+  text-align: center;
+}
+.category-listng .div-item-id {
+  width: 297px;
+  height: 340px;
+  border-radius: 20px;
+  border: 7px solid #ccc;
+  box-shadow: 0 0 6px #aac;
+  margin: 20px;
+  padding: 10px 0 0;
+  display: inline-block;
+  letter-spacing: 1px;
+  background: #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.category-listng .div-item-id img {
+  max-width: 90%;
+  height: 140px;
+  margin: 5px;
+}
+.category-listng .div-item-id h4 {
+  margin: 0;
+}
+.category-listng .div-item-id .AddOrSub {
+  background-color: #f6f6f6;
+  border-color: #ddd;
+  color: #333;
+  text-shadow: 0 1px 0 #f3f3f3;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  width: 1.75em;
+  height: 1.75em;
+  text-indent: -9999px;
+  white-space: nowrap !important;
+  font-size: 16px;
+  margin: 0.5em 0.3125em;
+  position: relative;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+.category-listng .div-item-id .AddOrSub:after {
+  left: 50%;
+  margin-left: -11px;
+  top: 50%;
+  margin-top: -11px;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: #666;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}
+.category-listng .div-item-id .qty-p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0 7px;
+  font-size: 1.5em;
+  width: 45px;
+}
+.category-listng .div-item-id .icon-plus:after {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="14px" height="14px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><polygon fill="#FFF" points="14,5 9,5 9,0 5,0 5,5 0,5 0,9 5,9 5,14 9,14 9,9 14,9 "/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');
+}
+.category-listng .div-item-id .icon-minus:after {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="14px" height="14px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><rect y="5" style="fill:#FFFFFF;" width="14" height="4"/></svg>');
 }
 
 @media (max-width: 600px) {

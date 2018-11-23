@@ -1,25 +1,19 @@
+const routes = [
+    {path: '/', component: AppHomePage},
+    {path: '/category/:category', component: ProductsVeg, props: true},
+    {path: '*', component: AppHomePage }
+];
+
 let appMain = new Vue({
     el: '#vueApp',
     props: {
         showDotMenu: false,
-        ms: 'dd'
     },
+
+    router:new VueRouter({/*mode: 'history',*/ routes }),
     data: {},
     components: {
         AppHeader,
         AppFrontMenu
-    }
-});
-
-let appContent = new Vue({
-    el: '#mainContents',
-    data: {
-        parCss: "border red-border",
-        catos: [['Veggies', 'veg'], ['Fruits', 'fruits'], ['Offers', 'offers'], ['Misc', 'misc']]
-    },
-
-    components: {
-        AppHomeSlider,
-        AppHomeCategories
     }
 });
